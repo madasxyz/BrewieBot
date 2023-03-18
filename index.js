@@ -2,7 +2,7 @@
 require("dotenv").config()
 require("console-stamp")(console, "[HH:MM:ss.l]")
 const fs = require("fs")
-const Database = require("./config/Database")
+const Database = require("./database/Database")
 const { Client, Intents, Collection } = require("discord.js")
 
 const db = new Database()

@@ -2,7 +2,7 @@
 // const { Routes } = require('discord-api-types/v9');
 // const epic = require('../epic.js')
 // const { MessageEmbed } = require('discord.js')
-const GuildSettings = require("../models/GuildSettings")
+const GuildSettings = require("../database/schemas/GuildSettings")
 require("dotenv").config()
 
 module.exports = {
