@@ -1,0 +1,92 @@
+{
+    "musicmaster" : {
+        "id":"musicmaster",
+        "displayName":"Music Master",
+        "description":"Awarded to people who do well in song guessing events!",
+        "rarity":"Epic",
+        "icon":":cd:",
+        "group":1,
+        "secret":false
+    },
+    "eventwinner" : {
+        "id":"eventwinner",
+        "displayName":"Event Winner",
+        "description":"Awarded to the best of the best, or losers who spend their time grinding events.",
+        "rarity":"Epic",
+        "icon":":crown:",
+        "group":1,
+        "secret":false
+    },
+    "starstruck" : {
+        "id":"starstruck",
+        "displayName":"Starstruck",
+        "description":"Get on the starboard.",
+        "rarity":"Uncommon",
+        "icon":":star:",
+        "group":1,
+        "secret":false
+    },
+    "giveaway":{
+        "id":"giveaway",
+        "displayName":"Luckmaster",
+        "description":"Win a giveaway.",
+        "rarity":"Rare",
+        "icon":":four_leaf_clover:",
+        "group":1,
+        "secret":false
+    },
+    "booster":{
+        "id":"booster",
+        "displayName":"Café Patron",
+        "description":"Boost the server.",
+        "rarity":"Rare",
+        "icon":"<a:boostanimated:994978912587231292>",
+        "group":1,
+        "secret":false
+    },
+    "secretphrase":{
+        "id":"secretphrase",
+        "displayName":"Secret Phrase",
+        "description":"Say the secret phrase.",
+        "rarity":"Rare",
+        "icon":":regional_indicator_g:",
+        "group":1,
+        "secret":true
+    },
+    "directmessage":{
+        "id":"directmessage",
+        "displayName":"Left on Read",
+        "description":"Sorry to inform you, but the bot can't read your direct messages.",
+        "rarity":"Common",
+        "icon":":ballot_box_with_check:",
+        "group":1,
+        "secret":true
+    },
+    "veteran1" : {
+        "id":"veteran1",
+        "displayName":"Member",
+        "description":"Be in the server for a week.",
+        "rarity":"Common",
+        "icon":":seedling:",
+        "group":-1,
+        "secret":false
+    },
+    "veteran2" : {
+        "id":"veteran2",
+        "displayName":"Regular",
+        "description":"Be in the server for a month.",
+        "rarity":"Uncommon",
+        "icon":":herb:",
+        "group":-2,
+        "secret":false
+    },
+    "veteran3" : {
+        "id":"veteran3",
+        "displayName":"Veteran",
+        "description":"Be in the server for 6 months.",
+        "rarity":"Rare",
+        "icon":":evergreen_tree:",
+        "group":-3,
+        "secret":false
+    }
+}
