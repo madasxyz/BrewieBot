@@ -42,18 +42,18 @@ module.exports = {
         return achievements[ach_id]
     },
     
-    update: function(memberID, interaction) {
+    update: function(interaction) {
         let userms = Date.now()-interaction.member.joinedTimestamp
         // Member roles
         switch(true) {
             case userms>604800000:
-                this.give(memberID, 'veteran1')
+                this.give(interaction.user.id, 'veteran1')
             break;
             case userms>2629800000:
-                this.give(memberID, 'veteran2')
+                this.give(interaction.user.id, 'veteran2')
             break;
             case userms>15778800000:
-                this.give(memberID, 'veteran3')
+                this.give(interaction.user.id, 'veteran3')
             break;
         }
     },

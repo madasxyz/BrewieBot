@@ -20,7 +20,7 @@ module.exports = {
         ,
     async execute(interaction) {
 
-        interaction.client.achievement.update(interaction.user.id)
+        interaction.client.achievement.update(interaction)
 
         switch (interaction.options.getSubcommand()) {
             case "info":
