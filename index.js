@@ -42,5 +42,4 @@ for (const file of eventFiles) {
         client.on(event.name, (...args) => event.execute(...args, commands, client.commands))
     }
 }
-
-client.login(process.env.TOKEN)
+client.login(!process.env.ENV ? process.env.DEVELOPMENT_TOKEN : process.env.PRODUCTION_TOKEN)

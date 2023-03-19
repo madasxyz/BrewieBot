@@ -20,7 +20,9 @@ module.exports = {
                         os.totalmem() / 1000000
                     )} mb`,
                     inline: false,
-                }
+                },
+                { name: "Environment:", value: !process.env.ENV ? "DEVELOPMENT" : process.env.ENV }
+            
             )
             .setColor(process.env.EMBED_COLOUR)
 
