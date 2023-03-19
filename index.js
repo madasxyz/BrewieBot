@@ -2,7 +2,7 @@
 require("dotenv").config()
 require("console-stamp")(console, "[HH:MM:ss.l]")
 const fs = require("fs")
-const Database = require("./config/Database")
+const Database = require("./database/Database")
 const { Client, Intents, Collection } = require("discord.js")
 
 const db = new Database()
@@ -18,7 +18,8 @@ const client = new Client({
 })
 
 client.queueMap = new Map()
-client.utils = require("./utils.js")
+client.utils = require("./modules/utils")
+client.achievement = require("./modules/achievement")
 
 // Load all commands
 const commandFiles = fs.readdirSync("./commands").filter((file) => file.endsWith(".js"))
@@ -42,5 +43,4 @@ for (const file of eventFiles) {
         client.on(event.name, (...args) => event.execute(...args, commands, client.commands))
     }
 }
-
-client.login(process.env.TOKEN)
+client.login(!process.env.ENV ? process.env.DEVELOPMENT_TOKEN : process.env.PRODUCTION_TOKEN)

@@ -1,6 +1,5 @@
 const { REST } = require("@discordjs/rest")
 const { Routes } = require("discord-api-types/v9")
-require("dotenv").config()
 
 module.exports = {
     name: "ready",
@@ -12,10 +11,10 @@ module.exports = {
         client.user.setActivity("funnies", { type: "STREAMING", link: "https://www.twitch.tv/madasish" })
 
         const CLIENT_ID = client.user.id
-
+            
         const rest = new REST(CLIENT_ID, {
             version: "9",
-        }).setToken(process.env.TOKEN)
+        }).setToken(!process.env.ENV ? process.env.DEVELOPMENT_TOKEN : process.env.PRODUCTION_TOKENN)
 
         ;(async () => {
             try {

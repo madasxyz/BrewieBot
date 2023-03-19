@@ -15,7 +15,8 @@ module.exports = {
         )
         .addSubcommand(
             new SlashCommandSubcommandBuilder().setName("wotd").setDescription("Urban Dictionary word of the day.")
-        ),
+        )
+        ,
     async execute(interaction) {
         interaction.deferReply({ ephemeral: false })
 
