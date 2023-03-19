@@ -14,7 +14,7 @@ module.exports = {
             
         const rest = new REST(CLIENT_ID, {
             version: "9",
-        }).setToken(!process.env.ENV ? process.env.DEVELOPMENT_TOKEN : process.env.PRODUCTION_TOKENN)
+        }).setToken(!process.env.ENV ? process.env.DEVELOPMENT_TOKEN : process.env.PRODUCTION_TOKEN)
 
         ;(async () => {
             try {
