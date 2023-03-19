@@ -20,7 +20,7 @@ module.exports = {
         ,
     async execute(interaction) {
 
-        interaction.client.update(interaction.user.id)
+        interaction.client.achievement.update(interaction.user.id)
 
         switch (interaction.options.getSubcommand()) {
             case "info":
@@ -42,7 +42,7 @@ module.exports = {
                         .setDescription(`${meta.description}${meta.secret==true ? '\n\n<:invisible:996443280470454372> *This achievement is meant to be secret! Shh!*' : ''}`)
                         .addField('Rarity', meta.rarity)
                         .setFooter({text: `Achievement ID: ${meta.id}`})
-                        
+
                     interaction.reply({ embeds: [embed], ephemeral: meta.secret })
                 })
             break;
