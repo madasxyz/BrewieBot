@@ -10,18 +10,19 @@ class Database {
         console.log("Connecting to database...")
 
         mongoose
+            .set('strictQuery', false)
             .connect(process.env.MONGO_URL, {
                 useNewUrlParser: true,
                 useUnifiedTopology: true,
             })
             .then(() => {
                 console.log("Connected to database!")
-                mongoose.set("strictQuery", false)
                 this.connection = mongoose.connection
             })
             .catch((err) => {
                 console.log(err)
             })
+
     }
 }
 

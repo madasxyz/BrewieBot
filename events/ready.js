@@ -8,7 +8,7 @@ module.exports = {
         console.log(
             `Bot has started, with ${client.users.cache.size} users, in ${client.channels.cache.size} channels of ${client.guilds.cache.size} guilds.`
         )
-        client.user.setActivity("funnies", { type: "STREAMING", link: "https://www.twitch.tv/madasish" })
+        client.user.setActivity("funny", { type: "STREAMING", link: "https://www.twitch.tv/madasish" })
 
         const CLIENT_ID = client.user.id
             

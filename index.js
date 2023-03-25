@@ -14,12 +14,16 @@ const client = new Client({
         Intents.FLAGS.GUILD_MESSAGES,
         Intents.FLAGS.GUILD_MEMBERS,
         Intents.FLAGS.GUILD_VOICE_STATES,
+        Intents.FLAGS.DIRECT_MESSAGES,
     ],
+    partials: [
+        'CHANNEL' // Required to receive DMs
+    ]
 })
 
 client.queueMap = new Map()
 client.utils = require("./modules/utils")
-client.achievement = require("./modules/achievement")
+client.ac = require("./modules/achievement")
 
 // Load all commands
 const commandFiles = fs.readdirSync("./commands").filter((file) => file.endsWith(".js"))
